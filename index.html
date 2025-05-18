@@ -4,77 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./game.js" defer></script>
+     <style>
+        body {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+        
+        .selection {
+            margin-top: 30px;
+            display: flex;
+            width: 200px;
+            justify-content: space-between;
+        }
+
+        .game-over {
+            font-size: 1000%;
+            font-weight: 900;
+        }
+
+        .result {
+            border: 3px solid brown;
+            margin-top: 5px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .human-computer {
+            margin-top: 5px;
+            display: flex;
+            border: 3px solid brown;
+            justify-content: space-between;
+            width: 250px;
+        }
+
+     </style>
+
 </head>
 <body>
-    <script>
-        function getComputerChoice() {
-            x = Math.floor(Math.random() *3);
-            if (x) {
-                if (x == 1) {
-                    return "paper";
-                } else {
-                    return "scissors"
-                }
-            } else {
-                return "rock"
-            }
-        }
+    <div class="start"><button id="start">Start</button></div>
+    <!-- <div class="game-over">You lost!</div> -->
+    <!-- Test  -->
+     <!-- Display the current selections for human and computer, to be added above the result box -->
+     <!-- Uncomment the script tag to run js -->
+    <!-- <div class="selection"> -->
+        <!-- <button class="rock">rock</button> -->
+        <!-- <button class="paper">paper</button> -->
+        <!-- <button class="scissors">scissors</button> -->
+    <!-- </div> -->
 
-        function getHumanChoice() {
-            y = prompt()
-            return y
-        }
+    <!-- <div class="human-computer"> -->
+        <!-- <div class="you">You: </div> -->
+        <!-- <div class="comp">Computer: </div> -->
+    <!-- </div> -->
 
-        let humanScore = 0;
-        let computerScore = 0;
-
-        function playRound(humanChoice, computerChoice) {
-            if (humanChoice==computerChoice) {
-            return ("It's DRAW! Play again")
-            } else {
-            
-            if ((humanChoice == "rock") && (computerChoice == "paper")){
-                return("You lost! Paper covers Rock")
-            } else if ((humanChoice == "rock") && (computerChoice == "scissors")) {
-                return("You won! Rock breaks Scissors")
-            } else if ((humanChoice == "paper") && (computerChoice == "rock")) {
-                return ("You won! Paper covers Rock")
-            } else if ((humanChoice == "paper") && (computerChoice == "scissors")) {
-                return ("You lost! Scissors cut Paper")
-            } else if ((humanChoice == "scissors") && (computerChoice == "paper")) {
-                return ("You won! Scissors cut Paper")
-            } else if ((humanChoice == "scissors") && (computerChoice == "rock")){
-                return ("You lost! Rock breaks Scissors")
-            } else {
-                return ("Invalid entry! Try again")
-            }
-            }
-            }
-        
-        function playGame () {
-            humanScore = 0;
-            computerScore = 0;
-            for (let i=0; i < 5; i++){
-                let humanSelection = String(getHumanChoice()).toLowerCase();
-                let computerSelection = String(getComputerChoice()).toLowerCase();
-
-                let roundResult = playRound(humanSelection, computerSelection);
-
-                if (roundResult.substr(0,9) == "You won! ") {
-                    humanScore += 1;
-                } else if (roundResult.substr(0,9) == "You lost!") {
-                    computerScore += 1;
-                }
-            }
-
-            if (humanScore > computerScore) {
-                return "Game Won!";
-            } else if (computerScore > humanScore) {
-                return "Game Lost!";
-            } else {
-                return "Game Draw!";
-            }
-        }
-    </script>
+    <!-- <div class="result"> -->
+        <!-- <div class="round">Round: </div> -->
+        <!-- <div class="current-score">Your Score: </div> -->
+        <!-- <div class="comp-score">Computer Score: </div> -->
+    <!-- </div> -->
+    <!-- <div class="winner">First to reach 5 points wins</div> -->
 </body>
 </html>
