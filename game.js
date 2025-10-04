@@ -308,24 +308,3 @@ startBtn.addEventListener("click", () => {
 }, {once: true});
 
 
-    // if (humanChoice==computerChoice) {
-    // return ("It's DRAW! Play again")
-    // } else {
-    
-    // if ((humanChoice == "rock") && (computerChoice == "paper")){
-    //     return("You lost! Paper covers Rock")
-    // } else if ((humanChoice == "rock") && (computerChoice == "scissors")) {
-    //     return("You won! Rock breaks Scissors")
-    // } else if ((humanChoice == "paper") && (computerChoice == "rock")) {
-    //     return ("You won! Paper covers Rock")
-    // } else if ((humanChoice == "paper") && (computerChoice == "scissors")) {
-    //     return ("You lost! Scissors cut Paper")
-    // } else if ((humanChoice == "scissors") && (computerChoice == "paper")) {
-    //     return ("You won! Scissors cut Paper")
-    // } else if ((humanChoice == "scissors") && (computerChoice == "rock")){
-    //     return ("You lost! Rock breaks Scissors")
-    // } 
-    // }
-
-
-
